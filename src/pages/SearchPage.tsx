@@ -31,8 +31,8 @@ const SearchPage = () => {
     if (searchParams.get('propertyType')) urlFilters.propertyType = searchParams.get('propertyType') as any;
     if (searchParams.get('minPrice')) urlFilters.minPrice = Number(searchParams.get('minPrice'));
     if (searchParams.get('maxPrice')) urlFilters.maxPrice = Number(searchParams.get('maxPrice'));
-    if (searchParams.get('city')) urlFilters.city = searchParams.get('city');
-    if (searchParams.get('district')) urlFilters.district = searchParams.get('district');
+    if (searchParams.get('city')) urlFilters.city = searchParams.get('city') || undefined;
+    if (searchParams.get('district')) urlFilters.district = searchParams.get('district') || undefined;
     if (searchParams.get('minRooms')) urlFilters.minRooms = Number(searchParams.get('minRooms'));
     if (searchParams.get('maxRooms')) urlFilters.maxRooms = Number(searchParams.get('maxRooms'));
     if (searchParams.get('minArea')) urlFilters.minArea = Number(searchParams.get('minArea'));

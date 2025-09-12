@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import { MapPin, Bed, Square, DollarSign, Phone, Mail, Calendar, ArrowLeft, ChevronLeft, ChevronRight } from 'lucide-react';
+import { MapPin, Bed, Square, Phone, Mail, ArrowLeft, ChevronLeft, ChevronRight } from 'lucide-react';
 import { mockProperties } from '../data/mockData';
 import { Property } from '../types';
 
