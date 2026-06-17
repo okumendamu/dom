@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -29,7 +30,7 @@
         /* Header */
         .header {
             background: white;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
             position: sticky;
             top: 0;
             z-index: 100;
@@ -108,7 +109,7 @@
             background: white;
             padding: 2rem;
             border-radius: 0.5rem;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
             margin-top: 2rem;
         }
 
@@ -192,14 +193,14 @@
         .property-card {
             background: white;
             border-radius: 0.5rem;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
             overflow: hidden;
             transition: transform 0.2s, box-shadow 0.2s;
         }
 
         .property-card:hover {
             transform: translateY(-2px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
         }
 
         .property-image {
@@ -349,7 +350,7 @@
             top: 0;
             width: 100%;
             height: 100%;
-            background-color: rgba(0,0,0,0.5);
+            background-color: rgba(0, 0, 0, 0.5);
         }
 
         .modal-content {
@@ -395,6 +396,7 @@
         }
     </style>
 </head>
+
 <body>
     <!-- Header -->
     <header class="header">
@@ -418,7 +420,7 @@
         <div class="container">
             <h1>Find Your Perfect Home</h1>
             <p>Discover thousands of rental and sale properties across Kazakhstan</p>
-            
+
             <div class="search-form">
                 <div class="search-grid">
                     <div class="form-group">
@@ -470,7 +472,7 @@
                 <h2>Featured Properties</h2>
                 <p>Discover our handpicked selection of premium properties</p>
             </div>
-            
+
             <div class="properties-grid" id="properties-grid">
                 <!-- Properties will be loaded here -->
             </div>
@@ -507,7 +509,8 @@
             <div class="footer-content">
                 <div class="footer-section">
                     <h3>ApartmentPlatform</h3>
-                    <p>Your trusted partner for finding the perfect home. We connect you with the best rental and sale properties in Kazakhstan.</p>
+                    <p>Your trusted partner for finding the perfect home. We connect you with the best rental and sale
+                        properties in Kazakhstan.</p>
                 </div>
                 <div class="footer-section">
                     <h3>Quick Links</h3>
@@ -665,7 +668,7 @@
         ];
 
         // Load properties on page load
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             loadProperties(properties);
         });
 
@@ -716,7 +719,7 @@
                 const matchesType = !type || property.type === type;
                 const matchesCity = !city || property.location.includes(city);
                 const matchesPrice = property.price >= minPrice && property.price <= maxPrice;
-                
+
                 return matchesType && matchesCity && matchesPrice;
             });
 
@@ -729,7 +732,7 @@
 
             const modal = document.getElementById('propertyModal');
             const modalContent = document.getElementById('modal-content');
-            
+
             modalContent.innerHTML = `
                 <h2>${property.title}</h2>
                 <div style="margin: 1rem 0;">
@@ -794,7 +797,7 @@
                     </a>
                 </div>
             `;
-            
+
             modal.style.display = 'block';
         }
 
@@ -803,12 +806,16 @@
         }
 
         // Close modal when clicking outside
-        window.onclick = function(event) {
+        window.onclick = function (event) {
             const modal = document.getElementById('propertyModal');
             if (event.target === modal) {
                 modal.style.display = 'none';
             }
         }
+        /*
+        test
+        */
     </script>
 </body>
+
 </html>
